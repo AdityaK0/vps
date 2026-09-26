@@ -1,0 +1,5 @@
+{
+  "name": "vps",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "postCreateCommand": "pip install -r requirements.txt && tmux new -s api -d 'gunicorn -k uvicorn.workers.UvicornWorker main:app --bind 0.0.0.0:8000 --workers 2'"
+}
